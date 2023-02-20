@@ -1,14 +1,22 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <FORM Revision="$Revision$" State="modified">
-  <STRUCT>
-    <VSTRUCT DfnName="simple_sound.dfn" Name="SoundType">
-      <ATOM Name="Filename" Value="blank.wav"/>
-    </VSTRUCT>
-  </STRUCT>
-  <STRUCT/>
-  <STRUCT/>
-  <STRUCT/>
-  <STRUCT/>
-  <LOG>Thu Sep 11 11:10:39 2003 (Mobo) .SoundType = simple_sound.dfn
-Thu Sep 11 11:10:39 2003 (Mobo) .SoundType.Filename = blank.wav</LOG>
+	<STRUCT>
+<!--	Use the commented out section if you want to refer to other sound sheets, this example randomly plays any sound sheet between claphand_0 and claphand_5
+		<VSTRUCT DfnName="context_sound.dfn" Name="SoundType">
+			<ATOM Name="PatternName" Value="claphand_%r6"/>-->
+		<VSTRUCT DfnName="simple_sound.dfn" Name="SoundType">
+			<ATOM Name="Filename" Value="blank.wav"/>
+			<ATOM Name="MinDistance" Value="5.0"/> 
+			<ATOM Name="MaxDistance" Value="30.0"/>
+			<ATOM Name="Alpha" Value="1.0"/>
+		</VSTRUCT>
+<!-- Gain can be negative, changes volume.  Transpose changes key -->
+		<ATOM Name="Gain" Value="0dB"/>
+		<ATOM Name="Transpose" Value="0"/>
+	</STRUCT>
+	<STRUCT/>
+	<STRUCT/>
+	<STRUCT/>
+	<STRUCT/>
+	<LOG></LOG>
 </FORM>
